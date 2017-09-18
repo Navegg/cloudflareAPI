@@ -1,0 +1,29 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./source/nvg.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["*"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "account": {
+        "title": "Navegg Account ID",
+        "order": 0,
+        "type": "integer",
+        "format": "textarea",
+        "placeholder": "Put your tag here! XXXXX"
+      }
+    }
+  }
+}
