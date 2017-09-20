@@ -11,7 +11,7 @@
     "handlers": [
       {
         "options": ["*"],
-        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+        "execute": "INSTALL_SCOPE.updateAccount(INSTALL_OPTIONS)"
       }
     ]
   },
