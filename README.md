@@ -3,7 +3,7 @@
 
 ## Install
 
-<a href="https://cloudflare.com/apps/[ appId ]/install?source=button">
+<a href="https://cloudflare.com/apps/eJGUxzdWZ3dD/install?source=button">
   <img
     src="https://install.cloudflareapps.com/install-button.png"
     alt="Install Navegg JS API with Cloudflare"
