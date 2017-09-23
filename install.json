@@ -17,6 +17,13 @@
   },
   "options": {
     "properties": {
+      "naccount":{
+        "title": "Google Account",
+        "type": "object",
+        "format": "account",
+        "services": ["googleanalytics", "navegg"],
+        "required": true
+      },
       "account": {
         "title": "Navegg Account ID",
         "order": 0,
