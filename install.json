@@ -8,28 +8,40 @@
     ]
   },
   "preview": {
-    "handlers": [
-      {
-        "options": ["*"],
-        "execute": "INSTALL_SCOPE.updateAccount(INSTALL_OPTIONS)"
-      }
-    ]
+    "hide": true
   },
+  "hooks": [
+    {
+      "endpoint": "https://oauth.navegg.com/v1/hook/",
+      "events": ["oauth-login"],
+      "block": true,
+      "authenticate": ["user"],
+      "failure": {
+        "action": "notify",
+        "message": "There was an error communicating with Naveggg."
+      }
+    },
+    {
+      "events": ["account-logout"],
+      "action": "reset-schema"
+    }
+  ],
   "options": {
     "properties": {
-      "naccount":{
-        "title": "Google Account",
+      "user":{
+        "title": "Navegg User",
         "type": "object",
         "format": "account",
-        "services": ["googleanalytics", "navegg"],
-        "required": true
+        "services": ["navegg"],
+        "required": true,
+        "order": 0
       },
-      "account": {
-        "title": "Navegg Account ID",
-        "order": 0,
-        "type": "integer",
-        "format": "textarea",
-        "placeholder": "Put your tag here! XXXXX"
+      "account":{
+        "title": "Account ID",
+        "type": "string",
+        "description": "Select the account to integrate with Cloudflare.",
+        "required": true,
+        "order": 1
       }
     }
   }
