@@ -1,6 +1,6 @@
 {
   "resources": {
-    "body": [
+    "head": [
       {
         "type": "script",
         "src": "./source/nvg.js"
@@ -8,7 +8,7 @@
     ]
   },
   "preview": {
-    "hide": true
+    "hide": false
   },
   "hooks": [
     {
@@ -41,7 +41,13 @@
         "type": "string",
         "description": "Select the account to integrate with Cloudflare.",
         "required": true,
-        "order": 1
+        "order": 1,
+        "showIf": {
+         "user.service": {
+            "op": "!=",
+            "value": null
+          }
+        }
       }
     }
   }
